@@ -284,6 +284,65 @@ dialog h3{margin:0 0 12px;font-size:17px}
 #toast{position:fixed;left:50%;bottom:88px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s;z-index:20;max-width:90vw;text-align:center}
 #toast.show{opacity:1}
 
+/* visão Foco: poucos elementos, fonte maior, botões grandes, sem animação */
+#cap{flex:1;min-width:0;display:flex}
+#cap input{width:100%;min-width:0;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);font-size:16px;outline:none}
+#cap input:focus{border-color:var(--accent)}
+#cap input::placeholder{color:var(--faint)}
+.fx{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:14px;font-size:17px}
+.fx h2{font-size:13px}
+.fx-t{display:flex;align-items:center;gap:12px;width:100%;padding:14px 12px;margin-top:8px;border-radius:12px;background:var(--card2);border-left:4px solid var(--c);text-align:left;font-size:18px;min-height:56px}
+.fx-t .n{flex:1;min-width:0;word-wrap:break-word}
+.fx-t .s{font-size:13px;color:var(--muted);white-space:nowrap}
+.fx-t.d .n{text-decoration:line-through;color:var(--faint)}
+.fx-t .ok{color:var(--ok);font-weight:700}
+.fx-pk{display:flex;align-items:center;gap:12px;width:100%;padding:12px;margin-top:8px;border-radius:12px;background:var(--card2);border:2px solid transparent;text-align:left;font-size:17px;min-height:52px}
+.fx-pk.on{border-color:var(--accent);background:var(--accent-soft)}
+.fx-pk .st{flex:none;width:26px;text-align:center;font-size:20px;color:var(--faint)}
+.fx-pk.on .st{color:var(--accent)}
+.fx-pk .n{flex:1;min-width:0;word-wrap:break-word}
+.fx-pk .tag{font-size:12px;color:var(--accent);font-weight:700;white-space:nowrap}
+.fx-o{display:flex;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--line)}
+.fx-o:first-of-type{border-top:0}
+.fx-o .n{flex:1;min-width:0;word-wrap:break-word;font-size:16px}
+.fx-o button{padding:8px 10px;border-radius:9px;background:var(--card2);font-size:14px;color:var(--muted);white-space:nowrap}
+.fx-big{width:100%;min-height:56px;border-radius:14px;font-size:18px;font-weight:700;background:var(--card2);color:var(--ink);padding:10px}
+.fx-big.pri{background:var(--accent);color:var(--on-accent)}
+.fx-big.ok{background:var(--ok);color:#0E1014}
+.fx-ttl{font-size:26px;font-weight:700;line-height:1.25;margin:4px 0 6px;word-wrap:break-word}
+.fx-clk{font-size:46px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.1}
+.fx-bar{height:16px;border-radius:99px;background:var(--card2);overflow:hidden;margin:12px 0 6px}
+.fx-bar i{display:block;height:100%;background:var(--ok)}
+.fx-bar.warn i{background:var(--accent)}
+.fx-bar.over{background:var(--late-soft)}
+.fx-lbl{font-size:15px;color:var(--muted)}
+.fx-lbl.warn{color:var(--accent);font-weight:600}
+.fx-lbl.over{color:var(--late);font-weight:700}
+.fx-act{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.fx-prev{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.fx-prev button{padding:10px 14px;border-radius:10px;background:var(--card2);font-size:16px;font-weight:600}
+.fx-ck{display:flex;align-items:center;gap:12px;width:100%;padding:12px 4px;border-top:1px solid var(--line);text-align:left;font-size:17px;min-height:52px}
+.fx-ck:first-of-type{border-top:0}
+.fx-ck .b{flex:none;width:28px;height:28px;border-radius:8px;border:2px solid var(--chk);display:grid;place-items:center}
+.fx-ck.d .b{background:var(--ok);border-color:var(--ok)}
+.fx-ck.d .b::after{content:"";width:7px;height:13px;border:solid var(--bg);border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.fx-ck .x{flex:1;min-width:0;word-wrap:break-word}
+.fx-ck.d .x{text-decoration:line-through;color:var(--faint)}
+.fx-in{width:100%;padding:12px;border:1.5px dashed var(--dash);border-radius:12px;background:var(--bg);font-size:16px;outline:none;margin-top:8px}
+.fx-in:focus{border-style:solid;border-color:var(--accent)}
+.fx-in::placeholder{color:var(--faint)}
+.fx details summary{font-size:15px;padding:8px 0}
+.fx-ent{padding:10px 0;border-top:1px solid var(--line)}
+.fx-ent:first-of-type{border-top:0}
+.fx-ent .n{font-size:16px;word-wrap:break-word;margin-bottom:8px}
+.fx-ent .bt{display:flex;flex-wrap:wrap;gap:6px}
+.fx-ent .bt button{padding:8px 12px;border-radius:9px;background:var(--card2);font-size:14px;font-weight:600}
+.fx-mot{display:grid;gap:8px;margin-bottom:10px}
+.fx-fim li{padding:4px 0}
+.fx-fim ul{margin:4px 0 12px;padding-left:20px}
+.fx-fim label{display:flex;gap:10px;align-items:flex-start;padding:8px 0;font-size:16px}
+.fx-fim input[type=checkbox]{width:22px;height:22px;flex:none;margin:1px 0 0}
+
 @media (max-width:899px){
   .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:-14px;padding-right:14px}
   .chips::-webkit-scrollbar{display:none}
@@ -328,6 +387,7 @@ dialog h3{margin:0 0 12px;font-size:17px}
   <div class="brand"><b>Diário de bordo</b><span>Trabalho</span></div>
   <nav id="tabs">
     <button data-act="view" data-v="dia"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>Dia</button>
+    <button data-act="view" data-v="foco"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>Foco</button>
     <button data-act="view" data-v="mes"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Mês</button>
     <button data-act="view" data-v="frentes"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>Frentes</button>
     <button data-act="view" data-v="rotinas"><svg class="ic" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.7-5.7L20 8M20 4v4h-4M20 12a8 8 0 0 1-13.7 5.7L4 16M4 20v-4h4"/></svg>Rotinas</button>
@@ -464,10 +524,12 @@ let view='dia', cur=today(), mesCur=today().slice(0,7), addWhen='dia', addFrente
 
 function render(){
   document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===view));
+  focoDefaults();
   renderHeader();
-  const v={dia:viewDia,mes:viewMes,frentes:viewFrentes,rotinas:viewRotinas,ajustes:viewAjustes}[view];
+  const v={dia:viewDia,foco:viewFoco,mes:viewMes,frentes:viewFrentes,rotinas:viewRotinas,ajustes:viewAjustes}[view];
   $('#app').innerHTML=v();
   if(view==='dia')tick();
+  if(view==='foco')focoTick();
   renderSync();
 }
 function renderHeader(){
@@ -480,6 +542,9 @@ function renderHeader(){
   }else if(view==='mes'){
     const [y,m]=mesCur.split('-').map(Number);
     h.innerHTML=`<button class="nav" data-act="prev" aria-label="Mês anterior">‹</button><button class="nav" data-act="next" aria-label="Próximo mês">›</button><div class="dt"><b>${MESES[m-1][0].toUpperCase()+MESES[m-1].slice(1)}</b><span>${y}</span></div>${mesCur!==today().slice(0,7)?'<button class="hoje" data-act="gohoje">Hoje</button>':''}`;
+  }else if(view==='foco'){
+    // captura rápida fica no cabeçalho fixo; não recria para não perder o que está sendo digitado
+    if(!$('#cap'))h.innerHTML=`<form id="cap" data-form="cap"><input name="t" placeholder="Captura rápida — Enter guarda" autocomplete="off" enterkeyhint="done" aria-label="Captura rápida"></form>`;
   }else{
     h.innerHTML=`<div class="dt"><b>${{frentes:'Frentes',rotinas:'Rotinas',ajustes:'Ajustes'}[view]}</b><span>${{frentes:'o que corre em paralelo',rotinas:'o que se repete',ajustes:'tema, tela, dados e sincronização'}[view]}</span></div>`;
   }
@@ -573,6 +638,119 @@ function viewDia(){
   <ul class="log">${log.map(e=>`<li class="${e.auto?'auto':''}"><span class="h">${e.h}</span><span class="x">${esc(e.txt)}</span><button data-act="del-log" data-id="${e.id}" aria-label="Apagar registro">×</button></li>`).join('')}</ul></div>`;
 
   return `<div class="daygrid"><div class="col">${add}${foco}${rotina}${tarefas}</div><div class="col">${resumo}${cardSemana()}${diario}${cardFrentesMini()}</div></div>`;
+}
+
+/* ---------- visão Foco ----------
+   Campos novos, todos opcionais (dados antigos carregam sem eles):
+   S.entrada=[{id,txt,criada}]   caixa de entrada da captura rápida
+   S.top3={'AAAA-MM-DD':[ids]}   no máximo 3 por dia
+   S.candTop3={de:'AAAA-MM-DD',ids:[]}  pendentes levadas no "Encerrar dia"
+   tarefa.prev (minutos previstos) · tarefa.trocas=[{em,motivo,tempo}]
+   O tempo continua no mesmo t.tempo/t.rodando do cronômetro das tarefas. */
+const MOTIVOS=[['interrupcao','Interrupção'],['bloqueio','Bloqueio'],['urgente','Demanda urgente'],['perdi','Perdi o foco']];
+const PREVS=[[15,'15 min'],[30,'30 min'],[45,'45 min'],[60,'1h'],[90,'1h30']];
+let editTop3=false, outrasAberto=false, entAberta=false;
+function focoDefaults(){
+  if(!Array.isArray(S.entrada))S.entrada=[];
+  if(!S.top3||typeof S.top3!=='object')S.top3={};
+}
+const top3Hoje=()=>(S.top3[today()]||[]).filter(id=>S.tarefas.some(t=>t.id===id));
+function toggleTop3(id){
+  const l=top3Hoje(), i=l.indexOf(id);
+  if(i>=0)l.splice(i,1);
+  else if(l.length>=3){toast('Máximo de 3. Tire uma antes de incluir outra.');return}
+  else l.push(id);
+  S.top3[today()]=l; save(); render();
+}
+function iniciarCrono(t){if(!t.rodando){S.tarefas.forEach(pararCrono);t.rodando=Date.now()}}
+const candidatas=()=>{const c=S.candTop3;return c&&c.de<today()?c.ids||[]:[]};
+
+function viewFoco(){
+  const td=today();
+  const ft=S.foco&&S.tarefas.find(t=>t.id===S.foco&&!t.done);
+  if(ft)return viewUmaCoisa(ft);
+  const pend=tarefasDia(td).filter(t=>!t.done), top=top3Hoje(), cands=candidatas();
+  let h='<div class="fx">';
+  if(editTop3||(!top.length&&pend.length)){
+    const lista=[...pend.filter(t=>cands.includes(t.id)),...pend.filter(t=>!cands.includes(t.id))];
+    h+=`<div class="card"><h2>Top 3 de hoje <small>${top.length}/3</small></h2><div class="muted">Escolha no máximo 3 prioridades. O resto fica guardado.</div>
+      ${lista.map(t=>{const on=top.includes(t.id);return `<button class="fx-pk ${on?'on':''}" data-act="top3" data-id="${t.id}"><span class="st">${on?'★':'☆'}</span><span class="n">${esc(t.titulo)}</span>${cands.includes(t.id)?'<span class="tag">do fechamento</span>':''}</button>`}).join('')}
+      <button class="fx-big pri" style="margin-top:12px" data-act="top3-ok">Pronto</button></div>`;
+  }else if(!pend.length&&!top.length){
+    h+=`<div class="card"><h2>Top 3 de hoje</h2><div class="empty-msg">Nada marcado para hoje. Jogue algo na captura do topo e triagem abaixo, ou traga uma tarefa de Frentes com "Hoje".</div></div>`;
+  }else{
+    const ts=top.map(id=>S.tarefas.find(t=>t.id===id));
+    h+=`<div class="card"><h2>Top 3 de hoje <small>${ts.filter(t=>t.done).length}/${ts.length} feitas</small> <button class="small-btn" data-act="top3-edit">mudar</button></h2>
+      ${ts.map(t=>{
+        const ck=t.check||[], ms=tempoT(t);
+        const st=t.done?'<span class="ok">✓ feita</span>':[ck.length?`${ck.filter(c=>c.done).length}/${ck.length} passos`:'',ms>=60000||t.prev?'⏱ '+fmtDur(ms)+(t.prev?' / '+fmtDur(t.prev*60000):''):''].filter(Boolean).join(' · ');
+        return `<button class="fx-t ${t.done?'d':''}" style="--c:${cor(t.frente)}" ${t.done?'':`data-act="fx-go" data-id="${t.id}"`}><span class="n">${esc(t.titulo)}</span><span class="s">${st}</span></button>`;
+      }).join('')}</div>`;
+    const outras=pend.filter(t=>!top.includes(t.id));
+    if(outras.length)h+=`<details class="card" id="fx-outras" ${outrasAberto?'open':''}><summary>Outras tarefas de hoje (${outras.length})</summary>
+      ${outras.map(t=>`<div class="fx-o"><span class="n">${esc(t.titulo)}</span><button data-act="top3" data-id="${t.id}" aria-label="Pôr no Top 3">☆ Top 3</button><button data-act="fx-go" data-id="${t.id}">Começar</button></div>`).join('')}</details>`;
+  }
+  const ent=S.entrada;
+  h+=`<details class="card" id="fx-ent" ${entAberta?'open':''}><summary>Caixa de entrada (${ent.length})</summary>
+    ${ent.length?ent.map(x=>`<div class="fx-ent"><div class="n">${esc(x.txt)}</div><div class="bt"><button data-act="ent-hoje" data-id="${x.id}">Tarefa de hoje</button><button data-act="ent-tarefa" data-id="${x.id}">Agendar…</button><button data-act="ent-del" data-id="${x.id}">Descartar</button></div></div>`).join(''):'<div class="empty-msg">Vazia. O que surgir, jogue no campo do topo.</div>'}</details>`;
+  h+=`<button class="fx-big" data-act="fx-fim">Encerrar dia</button></div>`;
+  return h;
+}
+
+function viewUmaCoisa(t){
+  const ck=t.check||[], okN=ck.filter(c=>c.done).length, ms=tempoT(t);
+  const tempo=t.prev
+    ?`<div class="fx-bar" id="fx-bar"><i id="fx-bi"></i></div><div class="fx-lbl" id="fx-lbl"></div>`
+    :`<div class="fx-lbl" style="margin-top:10px">Quanto tempo você prevê para isto?</div><div class="fx-prev">${PREVS.map(([m,l])=>`<button data-act="fx-prev" data-id="${t.id}" data-m="${m}">${l}</button>`).join('')}</div>`;
+  return `<div class="fx">
+  <div class="card"><div class="meta">${pill(t.frente)}<button class="small-btn" data-act="edit-t" data-id="${t.id}">editar</button></div>
+    <div class="fx-ttl">${esc(t.titulo)}</div>
+    <div class="fx-clk" id="fx-clk" style="${t.rodando?'':'color:var(--muted)'}">${fmtDur(ms,true)}</div>${t.rodando?'':'<div class="fx-lbl">pausado</div>'}
+    ${tempo}</div>
+  <div class="fx-act"><button class="fx-big ok" data-act="fx-ok" data-id="${t.id}">Concluir</button><button class="fx-big" data-act="fx-pausa" data-id="${t.id}">${t.rodando?'Pausar':ms?'Retomar':'Iniciar'}</button><button class="fx-big" data-act="fx-troca" data-id="${t.id}">Trocar tarefa</button></div>
+  <div class="card"><h2>Passos <small>${ck.length?okN+'/'+ck.length:''}</small></h2>
+    ${ck.map(c=>`<button class="fx-ck ${c.done?'d':''}" data-act="tgl-ck" data-id="${t.id}" data-ck="${c.id}"><span class="b"></span><span class="x">${esc(c.txt)}</span></button>`).join('')}
+    ${ck.length&&okN===ck.length?'<div class="fx-lbl" style="color:var(--ok);font-weight:600;padding:6px 0">Todos os passos feitos. Pode concluir.</div>':''}
+    <form data-form="fx-passo" data-id="${t.id}"><input class="fx-in" name="t" placeholder="${ck.length?'Próximo passo — Enter adiciona':'Qual é a primeira ação física?'}" autocomplete="off" enterkeyhint="done"></form></div>
+  </div>`;
+}
+function focoTick(){
+  if(view!=='foco')return;
+  const t=S.foco&&S.tarefas.find(x=>x.id===S.foco); if(!t)return;
+  const ms=tempoT(t), c=$('#fx-clk'); if(c)c.textContent=fmtDur(ms,true);
+  const bar=$('#fx-bar'); if(!bar||!t.prev)return;
+  const prev=t.prev*60000, fr=ms/prev, k=fr>=1?' over':fr>=.75?' warn':'';
+  bar.className='fx-bar'+k;
+  $('#fx-bi').style.width=Math.max(0,(1-fr)*100).toFixed(2)+'%';
+  const l=$('#fx-lbl'); l.className='fx-lbl'+k;
+  l.textContent=fr>=1?`Passou ${fmtDur(ms-prev)} do previsto (${fmtDur(prev)})`:`Faltam ${fmtDur(prev-ms)} de ${fmtDur(prev)}`;
+}
+function dlgTroca(t){
+  abrir(`<h3>Por que trocar?</h3><p class="muted" style="margin:0 0 12px">Fica registrado junto do tempo desta tarefa e no diário.</p>
+  <div class="fx-mot">${MOTIVOS.map(([v,l])=>`<button class="fx-big" data-act="fx-mot" data-id="${t.id}" data-v="${v}">${l}</button>`).join('')}</div>
+  <button class="btn sec" data-act="close">Cancelar</button>`);
+}
+function dlgEntrada(x){
+  abrir(`<form data-form="dlg-ent" data-id="${x.id}"><h3>Virar tarefa</h3>
+  <div class="f"><label>O que é</label><input name="titulo" value="${esc(x.txt)}" required></div>
+  <div class="f"><label>Quando (vazio = sem data, vai para Frentes)</label><input type="date" name="data" value=""></div>
+  <div class="f"><label>Frente</label><select name="frente">${optsFrente('')}</select></div>
+  <div class="btns"><button class="btn">Salvar</button><button type="button" class="btn sec" data-act="close">Cancelar</button></div></form>`);
+}
+function dlgFim(){
+  const td=today(), top=top3Hoje();
+  const feitas=S.tarefas.filter(t=>t.done&&t.feitoEm&&ymd(new Date(t.feitoEm))===td);
+  const rots=rotinasDia(td), rotOk=rots.filter(x=>x.done).length;
+  const pend=tarefasDia(td).filter(t=>!t.done);
+  const tr={}; S.tarefas.forEach(t=>(t.trocas||[]).forEach(x=>{if(ymd(new Date(x.em))===td)tr[x.motivo]=(tr[x.motivo]||0)+1}));
+  const trTxt=MOTIVOS.filter(([v])=>tr[v]).map(([v,l])=>tr[v]+' '+l.toLowerCase()).join(', ');
+  abrir(`<form data-form="dlg-fim" class="fx-fim"><h3>Encerrar o dia</h3>
+  <h2>Concluído <small>${feitas.length} tarefa${feitas.length===1?'':'s'}${rots.length?' · '+rotOk+'/'+rots.length+' rotinas':''}</small></h2>
+  ${feitas.length?`<ul>${feitas.map(t=>`<li>${esc(t.titulo)}${t.tempo>=60000?' <span class="muted">('+fmtDur(t.tempo)+')</span>':''}</li>`).join('')}</ul>`:'<div class="empty-msg" style="margin-bottom:12px">Nenhuma tarefa concluída hoje.</div>'}
+  ${trTxt?`<p class="muted" style="margin:0 0 12px">Trocas de tarefa hoje: ${trTxt}.</p>`:''}
+  <h2>Pendente <small>marque o que vai para amanhã</small></h2>
+  ${pend.length?pend.map(t=>`<label><input type="checkbox" name="amanha" value="${t.id}" ${top.includes(t.id)?'checked':''}><span>${esc(t.titulo)}</span></label>`).join(''):'<div class="empty-msg">Nada pendente.</div>'}
+  <div class="btns" style="margin-top:12px"><button class="btn">Encerrar</button><button type="button" class="btn sec" data-act="close">Cancelar</button></div></form>`);
 }
 
 function viewMes(){
@@ -678,6 +856,7 @@ function dlgTarefa(t){
   <div class="f"><label>Checklist (data opcional por item)</label><div id="ck-list">${(t.check||[]).map(ckRow).join('')}</div>
     <div class="ck-add"><input id="ck-new" placeholder="Novo item — Enter adiciona" autocomplete="off"><input type="date" id="ck-newd" aria-label="Data do novo item"><button type="button" class="btn sec" data-act="ck-add">Adicionar</button></div></div>
   <div class="f"><label>Tempo gasto (minutos)${t.rodando?' · contagem em andamento':''}</label><input type="number" name="tempo" min="0" value="${min}" data-orig="${min}"></div>
+  <div class="f"><label>Tempo previsto (minutos, opcional)</label><input type="number" name="prev" min="0" value="${t.prev||''}"></div>
   <div class="f"><label>Nota</label><textarea name="nota" rows="3">${esc(t.nota||'')}</textarea></div>
   <div class="btns"><button class="btn">Salvar</button><button type="button" class="btn sec" data-act="close">Cancelar</button><span class="grow"></span><button type="button" class="btn warn" data-act="del-t" data-id="${t.id}">Excluir</button></div></form>`);
 }
@@ -759,6 +938,23 @@ document.addEventListener('click',e=>{
     case 'reset':if(confirm('Apagar todas as tarefas, rotinas e o diário deste navegador? Faça um backup antes, se quiser guardar.')){S=seed();save();render();toast('Recomeçado')}break;
     case 'gh-push':ghPush(true);break;
     case 'gh-pull':ghPull(true);break;
+    case 'fx-go':{const t=S.tarefas.find(x=>x.id===id);if(!t)break;S.foco=id;iniciarCrono(t);save();render();window.scrollTo(0,0);break}
+    case 'fx-ok':toggleTarefa(id);toast('Concluída');break;
+    case 'fx-pausa':{const t=S.tarefas.find(x=>x.id===id);if(t.rodando)pararCrono(t);else iniciarCrono(t);save();render();break}
+    case 'fx-troca':dlgTroca(S.tarefas.find(x=>x.id===id));break;
+    case 'fx-mot':{const t=S.tarefas.find(x=>x.id===id);if(!t)break;pararCrono(t);
+      const m=MOTIVOS.find(x=>x[0]===b.dataset.v);
+      (t.trocas=t.trocas||[]).push({em:Date.now(),motivo:m[0],tempo:t.tempo||0});
+      addLog(today(),'Troquei de tarefa ('+m[1].toLowerCase()+'): '+t.titulo+' · '+fmtDur(t.tempo||0)+' até aqui','troca');
+      S.foco=null;dlg.close();save();render();break}
+    case 'fx-prev':{const t=S.tarefas.find(x=>x.id===id);t.prev=+b.dataset.m;save();render();break}
+    case 'top3':if(b.classList.contains('fx-pk'))editTop3=true;toggleTop3(id);break;  // seletor fica aberto até "Pronto"
+    case 'top3-edit':editTop3=true;render();break;
+    case 'top3-ok':editTop3=false;render();break;
+    case 'ent-hoje':{const x=S.entrada.find(e=>e.id===id);if(!x)break;S.tarefas.push({id:uid(),titulo:x.txt,data:today(),frente:'',done:false,criada:Date.now(),nota:''});S.entrada=S.entrada.filter(e=>e.id!==id);save();render();toast('Virou tarefa de hoje');break}
+    case 'ent-tarefa':dlgEntrada(S.entrada.find(e=>e.id===id));break;
+    case 'ent-del':S.entrada=S.entrada.filter(e=>e.id!==id);save();render();toast('Descartado');break;
+    case 'fx-fim':dlgFim();break;
     case 'gh-off':localStorage.removeItem(GHKEY);render();toast('Sincronização desligada');break;
   }
 });
@@ -795,6 +991,7 @@ document.addEventListener('submit',e=>{
     Object.assign(t,{titulo:g('titulo'),data:g('data')||null,frente:g('frente'),nota:g('nota'),check});
     const tm=f.elements.tempo;
     if(tm&&tm.value!==tm.dataset.orig){t.tempo=Math.max(0,parseInt(tm.value,10)||0)*60000;if(t.rodando)t.rodando=Date.now()}
+    const pv=parseInt(g('prev'),10); if(pv>0)t.prev=pv; else delete t.prev;
     dlg.close();save();render();
   }else if(k==='dlg-r'){
     let r=S.rotinas.find(x=>x.id===f.dataset.id);
@@ -808,6 +1005,26 @@ document.addEventListener('submit',e=>{
     if(!fr){fr={id:uid()};S.frentes.push(fr)}
     Object.assign(fr,{nome:g('nome'),cor:g('cor')||COLORS[0],arquivada:fd.get('arquivada')==='on'});
     dlg.close();save();render();
+  }else if(k==='cap'){
+    const t=g('t'); if(!t)return;
+    S.entrada.push({id:uid(),txt:t,criada:Date.now()});
+    f.reset();save();render();toast('Guardado na caixa de entrada');
+  }else if(k==='fx-passo'){
+    const t=S.tarefas.find(x=>x.id===f.dataset.id), txt=g('t'); if(!t||!txt)return;
+    (t.check=t.check||[]).push({id:uid(),txt,data:null,done:false});
+    save();render();const i=document.querySelector('.fx-in');if(i)i.focus();
+  }else if(k==='dlg-ent'){
+    const id=f.dataset.id; if(!S.entrada.some(e=>e.id===id)){dlg.close();return}
+    const data=g('data')||null;
+    S.tarefas.push({id:uid(),titulo:g('titulo'),data,frente:g('frente'),done:false,criada:Date.now(),nota:''});
+    S.entrada=S.entrada.filter(e=>e.id!==id);
+    dlg.close();save();render();toast(data?'Agendada para '+curto(data):'Guardada em Frentes, sem data');
+  }else if(k==='dlg-fim'){
+    const td=today(), am=addDays(td,1), ids=fd.getAll('amanha').map(String);
+    S.tarefas.forEach(t=>{if(ids.includes(t.id))t.data=am});
+    S.candTop3={de:td,ids};
+    S.tarefas.forEach(pararCrono); S.foco=null;
+    dlg.close();save();render();toast(ids.length?ids.length+' para amanhã, como candidatas ao Top 3':'Dia encerrado');
   }else if(k==='gh'){
     const c={repo:g('repo').replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,''),path:g('path')||'agenda-trabalho.json',token:g('token')};
     if(!/^[\w.-]+\/[\w.-]+$/.test(c.repo)||!c.token){toast('Preencha repositório (usuario/repositorio) e token');return}
@@ -815,6 +1032,7 @@ document.addEventListener('submit',e=>{
     ghPull(true).then(ok=>{if(ok!==false)ghPush(false)});
   }
 });
+document.addEventListener('toggle',e=>{if(e.target.id==='fx-outras')outrasAberto=e.target.open;else if(e.target.id==='fx-ent')entAberta=e.target.open},true);
 document.addEventListener('keydown',e=>{
   if(e.key==='Enter'&&e.target.id==='ck-new'){e.preventDefault();ckAdd();return}
   if(e.key==='n'&&view==='dia'&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)&&!dlg.open){e.preventDefault();$('#addt').focus()}
@@ -895,6 +1113,8 @@ setInterval(()=>{if(today()!==ultimoHoje){if(cur===ultimoHoje)cur=today();ultimo
 
 // atualiza na tela o cronômetro que estiver rodando
 setInterval(()=>{document.querySelectorAll('[data-crono]').forEach(el=>{const t=S.tarefas.find(x=>x.id===el.dataset.crono);if(t&&t.rodando)el.textContent=fmtDur(tempoT(t),true)})},1000);
+
+setInterval(focoTick,1000);
 
 if(!S.updatedAt){S.updatedAt=1;persistLocal()}
 aplicarTema(getTema());
